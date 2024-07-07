@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
 import Task from './Task';
 import { useStore } from '../store';
-import { useEffect } from 'react';
 import classNames from 'classnames';
 
-export default function Column({ state }) {
+const Column = ({ state }) => {
   const [text, setText] = useState('');
   const [open, setOpen] = useState(false);
   const [drop, setDrop] = useState(false);
@@ -37,26 +36,26 @@ export default function Column({ state }) {
         setDraggedTask(null);
       }}
     >
-      <div className="bg-gray-dark min-h-20rem text-white w-80 max-w-20rem m-2 rounded p-2">
+      <div className="bg-gray-200 text-black w-80 max-w-20rem m-2 rounded-lg p-4">
         <div className="titleWrapper flex justify-between items-center">
-          <p>{state}</p>
+          <p className="text-lg font-semibold">{state}</p>
           <button
             onClick={() => setOpen(true)}
-            className="bg-white text-black px-2 py-1 rounded cursor-pointer"
+            className="bg-white text-black px-3 py-2 rounded-md cursor-pointer m-2"
           >
-            Add
+            Add Task
           </button>
         </div>
         {tasks.map((task) => (
           <Task title={task.title} key={task.id} />
         ))}
         {open && (
-          <div className="Modal fixed top-0 left-0 w-full h-full bg-black bg-opacity-30 flex justify-center items-center">
-            <div className="modalContent bg-white rounded p-4 flex justify-center items-center">
+          <div className="Modal fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex justify-center items-center">
+            <div className="modalContent bg-white rounded-lg p-6 flex items-center">
               <input
                 onChange={(e) => setText(e.target.value)}
                 value={text}
-                className="border p-2 rounded mr-2"
+                className="border p-3 rounded-md mr-3 w-60"
                 placeholder="Enter task title"
               />
               <button
@@ -65,7 +64,7 @@ export default function Column({ state }) {
                   setText('');
                   setOpen(false);
                 }}
-                className="bg-blue-500 text-white px-4 py-2 rounded cursor-pointer"
+                className="bg-blue-500 text-white px-4 py-2 rounded-md cursor-pointer"
               >
                 Submit
               </button>
@@ -75,4 +74,6 @@ export default function Column({ state }) {
       </div>
     </div>
   );
-}
+};
+
+export default Column;

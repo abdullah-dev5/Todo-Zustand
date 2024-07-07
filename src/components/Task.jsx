@@ -12,28 +12,23 @@ export default function Task({ title }) {
 
   return (
     <div
-      className="task bg-white rounded-md shadow-md p-2 flex flex-col justify-between mb-2 cursor-move"
+      className="task bg-yellow-200 rounded-lg shadow-md p-4 flex flex-col justify-between mb-4 cursor-move"
       draggable
       onDragStart={() => setDraggedTask(task.title)}
     >
-      <div>{task.title}</div>
-      <div className="bottomWrapper flex justify-between">
-        <div>
-          <img
-            src={trash}
-            onClick={() => deleteTask(task.title)}
-            className="h-5 cursor-pointer"
-            alt="Delete"
-          />
-        </div>
+      <div className="text-xl font-medium mb-2">{task.title}</div>
+      <div className="bottomWrapper flex justify-between items-center">
+        <img
+          src={trash}
+          onClick={() => deleteTask(task.title)}
+          className="h-6 w-6 cursor-pointer"
+          alt="Delete"
+        />
         <div
-          className={classNames(
-            'status p-1 rounded-md text-xs',
-            {
-              'bg-gray-light': task.state === 'ONGOING',
-              'bg-done': task.state === 'DONE',
-            }
-          )}
+          className={classNames('status px-2 py-1 rounded-md text-sm font-bold', {
+            'bg-gray-200 text-gray-800': task.state === 'ONGOING',
+            'bg-gray-300 text-gray-700': task.state === 'DONE',
+          })}
         >
           {task.state}
         </div>
