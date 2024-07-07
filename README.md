@@ -15,11 +15,11 @@ This project is a task management application built with React, Zustand, and Tai
 - **Tailwind CSS:** A utility-first CSS framework for rapidly building custom user interfaces.
 
 ## Installation
-React
-React DOM
-Zustand
-Tailwind CSS
-classnames immer
+- React
+- React DOM
+- Zustand
+- Tailwind CSS
+- classnames immer
 
 
 1. **Clone the repository:**
@@ -29,27 +29,27 @@ classnames immer
    cd task-management-app
 
 
-task-management-app/
-│
-├── public/
-│   └── index.html
-│
-├── src/
-│   ├── assets/
-│   │   └── trash-2.svg
-│   ├── components/
-│   │   ├── Column.jsx
-│   │   └── Task.jsx
-│   ├── store.js
-│   ├── App.jsx
-│   ├── App.css
-│   ├── index.js
-│   └── index.css
-│
-├── .gitignore
-├── package.json
-├── README.md
-└── tailwind.config.js
+- task-management-app/
+- │
+- ├── public/
+- │   └── index.html
+- │
+- ├── src/
+- │   ├── assets/
+- │   │   └── trash-2.svg
+- │   ├── components/
+- │   │   ├── Column.jsx
+- │   │   └── Task.jsx
+- │   ├── store.js
+- │   ├── App.jsx
+- │   ├── App.css
+- │   ├── index.js
+- │   └── index.css
+- │
+- ├── .gitignore
+- ├── package.json
+- ├── README.md
+- └── tailwind.config.js
 
 
 
