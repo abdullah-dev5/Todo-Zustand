@@ -28,7 +28,7 @@ This project is a task management application built with React, Zustand, and Tai
    git clone https://github.com/your-username/task-management-app.git
    cd task-management-app
 
-
+## Project Structure
 - task-management-app/
 - │
 - ├── public/
