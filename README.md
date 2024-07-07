@@ -1,8 +1,55 @@
-# React + Vite
+# Task Management Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a task management application built with React, Zustand, and Tailwind CSS. The application allows users to add, delete, and move tasks between different states: Planned, Ongoing, and Done.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Add Tasks:** Users can add new tasks to any of the three states.
+- **Delete Tasks:** Users can delete tasks.
+- **Move Tasks:** Users can drag and drop tasks between the different states.
+
+## Technologies Used
+
+- **React:** A JavaScript library for building user interfaces.
+- **Zustand:** A small, fast, and scalable state-management solution for React.
+- **Tailwind CSS:** A utility-first CSS framework for rapidly building custom user interfaces.
+
+## Installation
+React
+React DOM
+Zustand
+Tailwind CSS
+classnames immer
+
+
+1. **Clone the repository:**
+
+   ```bash
+   git clone https://github.com/your-username/task-management-app.git
+   cd task-management-app
+
+
+task-management-app/
+│
+├── public/
+│   └── index.html
+│
+├── src/
+│   ├── assets/
+│   │   └── trash-2.svg
+│   ├── components/
+│   │   ├── Column.jsx
+│   │   └── Task.jsx
+│   ├── store.js
+│   ├── App.jsx
+│   ├── App.css
+│   ├── index.js
+│   └── index.css
+│
+├── .gitignore
+├── package.json
+├── README.md
+└── tailwind.config.js
+
+
+
