@@ -3,7 +3,7 @@ import Column from './components/Column';
 
 function App() {
   return (
-    <div className="bg-gray min-h-screen flex justify-center items-start">
+    <div className="bg-gray-100 min-h-screen flex justify-center items-start space-x-4 p-4">
       <Column state="PLANNED" />
       <Column state="ONGOING" />
       <Column state="DONE" />

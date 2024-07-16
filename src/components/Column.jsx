@@ -16,10 +16,16 @@ const Column = ({ state }) => {
   const draggedTask = useStore((store) => store.draggedTask);
   const moveTask = useStore((store) => store.moveTask);
 
+  const columnBgColors = {
+    PLANNED: 'bg-blue-200',
+    ONGOING: 'bg-yellow-200',
+    DONE: 'bg-green-200',
+  };
+
   return (
     <div
       className={classNames(
-        'column',
+        'column p-2',
         { 'border-white border-dashed border-4': drop }
       )}
       onDragOver={(e) => {
@@ -36,18 +42,18 @@ const Column = ({ state }) => {
         setDraggedTask(null);
       }}
     >
-      <div className="bg-gray-200 text-black w-80 max-w-20rem m-2 rounded-lg p-4">
-        <div className="titleWrapper flex justify-between items-center">
+      <div className={`text-black w-80 max-w-xs m-2 rounded-lg p-4 ${columnBgColors[state]}`}>
+        <div className="titleWrapper flex justify-between items-center mb-4">
           <p className="text-lg font-semibold">{state}</p>
           <button
             onClick={() => setOpen(true)}
-            className="bg-white text-black px-3 py-2 rounded-md cursor-pointer m-2"
+            className="bg-white text-black px-3 py-2 rounded-md cursor-pointer"
           >
             Add Task
           </button>
         </div>
         {tasks.map((task) => (
-          <Task title={task.title} key={task.id} />
+          <Task title={task.title} key={task.id} columnState={state} />
         ))}
         {open && (
           <div className="Modal fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex justify-center items-center">
